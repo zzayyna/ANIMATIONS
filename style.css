@@ -1,0 +1,171 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat, arial, sans-serif;
+    font-weight: bold;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.everything {
+    transition: 1s ease;
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    width: 100%;
+}
+
+nav {
+    background-color: #2a042f;
+    color: white;
+    font-size: 30px;
+    padding: 5px;
+    font-weight: lighter;
+    width: 99.7%;
+    margin: -5px;
+    text-align: left;
+    position: fixed;
+    top: 5px;
+    z-index: 1;
+}
+
+nav p {
+    padding-left: 10px;
+    font-weight: lighter;
+}
+
+
+nav:hover {
+    cursor: pointer;
+}
+
+.menu {
+    position: fixed;
+    background-color: #2a042f;
+    box-shadow: 10px 10px 15px 0px;
+    display: flex;
+    flex-direction: column;
+    top: 35px;
+    height: 100%;
+    width: 25%;
+    z-index: 1;
+    transform: translateX(-150%);
+    transition: all 1s ease;
+
+}
+
+.showMenu {
+    transform: translateX(0%);
+}
+
+.darken {
+    opacity: 20%;
+}
+
+.menu a {
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.menu a:hover {
+    color: #b679be;
+}
+
+.welcome {
+    height: 600px;
+    background-color: #2a042f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome a {
+    margin: 3px;
+    padding: 5px;
+    opacity: 0;
+    text-decoration: none;
+    border: solid white 2px;
+    color: white;
+    animation: 2s ease-in 0s 1 fadeIn2 forwards;
+    animation-delay: 4s;
+    transition: .5s ease;
+
+}
+
+.welcome a:hover {
+    background-color: #b679be;
+}
+
+@keyframes fadeIn2 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.welcome h1 {
+    text-align: center;
+    letter-spacing: 5px;
+    color: white;
+    font-size: 60px;
+    animation: 4s ease-in 0s 1 fadeIn;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+        transform: translateX(200%);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateX(0);
+    }
+}
+
+.intro {
+    margin: 50px 150px;
+}
+
+.intro h3 {
+    background-color: black;
+    color: white;
+    font-size: 30px;
+}
+
+.reveal {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.revealSide {
+    transform: translateX(100px);
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.revealSide.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+img {
+    height: 300px;
+}
